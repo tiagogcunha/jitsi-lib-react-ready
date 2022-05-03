@@ -260,7 +260,7 @@ export class Webcall extends React.Component {
           domain: serverURL,
           muc: `conference.${serverURL}`, // FIXME: use XEP-0030
         },
-        bosh: "//infinitoo.io/http-bind",
+        bosh: "//beta.meet.jit.si/http-bind",
         serviceUrl: `wss://${serverURL}/xmpp-websocket?room=${roomId}`,
         clientNode: `https://${serverURL}`,
       }
