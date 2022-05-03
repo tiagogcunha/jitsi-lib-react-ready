@@ -3,7 +3,6 @@ import "../assets/App.css";
 import { LocalTracks } from "./Lib/LocalTracks";
 import _ from "lodash";
 import { RemoteTrack } from "./Lib/RemoteTrack";
-import { LocalSpeaker } from "./Lib/LocalSpeaker";
 import { v4 as uuidv4 } from "uuid";
 
 
@@ -17,7 +16,6 @@ export class Webcall extends React.Component {
       selectedSpeakerDeviceId: "",
       defaultMicId: "",
       defaultVideoId: "",
-      defaultSpeakerId: "",
       deviceList: [],
       status: "closed",
       lastError: "",
@@ -339,7 +337,6 @@ export class Webcall extends React.Component {
       //lastError,
       defaultMicId,
       defaultVideoId,
-      defaultSpeakerId,
       deviceList,
       //loaded = false,
       connected = false,
@@ -368,7 +365,6 @@ export class Webcall extends React.Component {
 
         <div className="TR">
           <div className="TR_Header">
-             <LocalSpeaker deviceList={deviceList} key='LocalSpeaker' defaultSpeakerId={defaultSpeakerId} onSpeakerChanged={this.onSpeakerChanged} />  
               <p>Connected to {serverURL}, room {roomId}</p>
           </div>
           <div className="TR_Body">
